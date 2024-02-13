@@ -28,6 +28,9 @@ jobs:
           version: 8
       - name: Install dependencies
         run: pnpm install
+      - name: Mock files
+        run: |
+          echo '[{"data": { "id": 2, "text": "Hi"}}]' > src/crowdin/files.json
       - name: Build files
         run: pnpm run build
       - name: Setup CodeQL
