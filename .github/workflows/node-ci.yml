@@ -33,6 +33,10 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Mock files
+        run: |
+          echo '[{"data": { "id": 2, "text": "Hi"}}]' > src/crowdin/files.json
+
       - name: Check for eslint-disable
         uses: naomi-lgbt/eslint-disable-action@main
         with:
