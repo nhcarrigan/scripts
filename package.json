@@ -9,6 +9,7 @@
     "start": "node -r dotenv/config prod/index.js",
     "test": "ts-node test/index.spec.ts",
     "crowdin:hidden": "node -r dotenv/config prod/crowdin/hidden-strings.js",
+    "discourse:solutions": "node -r dotenv/config prod/discourse/removeSolutions.js",
     "github:teams": "node -r dotenv/config prod/github/permissions.js"
   },
   "repository": {
