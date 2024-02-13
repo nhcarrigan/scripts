@@ -7,7 +7,8 @@
     "build": "tsc",
     "lint": "eslint src test --max-warnings 0 && prettier src test --check",
     "start": "node -r dotenv/config prod/index.js",
-    "test": "echo 'No tests yet' && true"
+    "test": "ts-node test/index.spec.ts",
+    "crowdin:hidden": "node -r dotenv/config prod/crowdin/hidden-strings.js"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,7 @@
     "@types/node": "20.11.17",
     "eslint": "8.56.0",
     "prettier": "3.2.5",
+    "ts-node": "^10.9.2",
     "typescript": "5.3.3"
   }
 }
