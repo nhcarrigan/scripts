@@ -11,6 +11,17 @@
           }
         ]
       }
+    },
+    {
+      "files": ["src/github/closePr.ts"],
+      "rules": {
+        "camelcase": [
+          "error",
+          {
+            "allow": ["issue_number", "pull_number"]
+          }
+        ]
+      }
     }
   ]
 }
