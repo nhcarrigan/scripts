@@ -8,7 +8,8 @@
     "lint": "eslint src test --max-warnings 0 && prettier src test --check",
     "start": "node -r dotenv/config prod/index.js",
     "test": "ts-node test/index.spec.ts",
-    "crowdin:hidden": "node -r dotenv/config prod/crowdin/hidden-strings.js"
+    "crowdin:hidden": "node -r dotenv/config prod/crowdin/hidden-strings.js",
+    "github:teams": "node -r dotenv/config prod/github/permissions.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
   },
   "homepage": "https://github.com/naomi-lgbt/nodejs-typescript-template#readme",
   "dependencies": {
+    "@octokit/rest": "20.0.2",
     "dotenv": "16.4.3",
     "winston": "3.11.0"
   },
