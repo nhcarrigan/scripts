@@ -6,7 +6,7 @@ import { TeamRepos } from "./config/TeamRepos";
 
 (async () => {
   const github = new Octokit({
-    auth: process.env.GITHUB_TOKEN
+    auth: `Bearer ${process.env.GITHUB_TOKEN}`
   });
   const repos = await github.repos.listForOrg({
     type: "all",
