@@ -11,6 +11,7 @@
     "crowdin:hidden": "node -r dotenv/config prod/crowdin/hidden-strings.js",
     "discourse:solutions": "node -r dotenv/config prod/discourse/removeSolutions.js",
     "github:close-pull": "node -r dotenv/config prod/github/closePr.js",
+    "github:labels": "node -r dotenv/config prod/github/syncLabels.js",
     "github:teams": "node -r dotenv/config prod/github/permissions.js"
   },
   "repository": {
