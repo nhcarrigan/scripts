@@ -36,7 +36,7 @@
   "homepage": "https://github.com/naomi-lgbt/nodejs-typescript-template#readme",
   "dependencies": {
     "@octokit/rest": "20.0.2",
-    "dotenv": "16.4.3",
+    "dotenv": "16.4.4",
     "winston": "3.11.0"
   },
   "devDependencies": {
