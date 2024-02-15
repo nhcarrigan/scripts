@@ -44,7 +44,7 @@
     "@nhcarrigan/eslint-config": "3.2.0",
     "@nhcarrigan/prettier-config": "3.2.0",
     "@nhcarrigan/typescript-config": "3.0.0",
-    "@types/node": "20.11.17",
+    "@types/node": "20.11.19",
     "eslint": "8.56.0",
     "prettier": "3.2.5",
     "ts-node": "10.9.2",
