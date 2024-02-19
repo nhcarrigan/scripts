@@ -2,7 +2,9 @@
   "extends": "@nhcarrigan/typescript-config",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./prod"
+    "outDir": "./prod",
+    // To account for scripts where modules may be commented out from the main function body.
+    "noUnusedLocals": false
   },
   "exclude": ["./test"]
 }
