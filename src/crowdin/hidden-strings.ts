@@ -187,16 +187,19 @@ const removeHiddenTranslations = async (id: number) => {
         const isTrans = await isTransRes.json();
         if (isTrans.data.length) {
           logHandler.warn(`Found ${lang} translations for ${string.data.text}`);
-          await fetch(`${url}/projects/${projectId}/translations`, {
-            method: "DELETE",
-            headers: {
-              authorization: token
-            },
-            body: JSON.stringify({
-              stringId: id,
-              languageId: lang
-            })
-          });
+          const del = await fetch(
+            `${url}/api/v2/projects/${projectId}/translations?stringId=${id}&languageId=${lang}`,
+            {
+              method: "DELETE",
+              headers: {
+                authorization: token
+              }
+            }
+          );
+          if (del.status !== 204) {
+            const delResult = await del.text();
+            logHandler.error(delResult);
+          }
         }
         await fetch(
           `${url}/api/v2/projects/${projectId}/strings/${string.id}`,
@@ -328,7 +331,7 @@ const getSpecificString = async (id: number) => {
   /**
    * Edit this find query to specify which string you want.
    *
-   * @example `s.data.text.startsWith("Now you need to")
+   * @example `s.data.text.startsWith("Now you need to")`
    */
   const target = strings.data.find((s) => s.data.id === 1581452);
   logHandler.info(target);
