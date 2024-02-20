@@ -9,6 +9,7 @@
     "start": "node -r dotenv/config prod/index.js",
     "test": "ts-node test/index.spec.ts",
     "crowdin:hidden": "node -r dotenv/config prod/crowdin/hidden-strings.js",
+    "discord:commands": "node -r dotenv/config prod/discord/clearCommands.js",
     "discourse:solutions": "node -r dotenv/config prod/discourse/removeSolutions.js",
     "github:close-pull": "node -r dotenv/config prod/github/closePr.js",
     "github:labels": "node -r dotenv/config prod/github/syncLabels.js",
@@ -37,6 +38,7 @@
   "homepage": "https://github.com/naomi-lgbt/nodejs-typescript-template#readme",
   "dependencies": {
     "@octokit/rest": "20.0.2",
+    "discord.js": "14.14.1",
     "dotenv": "16.4.4",
     "winston": "3.11.0"
   },
