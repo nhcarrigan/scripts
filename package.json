@@ -13,7 +13,8 @@
     "discourse:solutions": "node -r dotenv/config prod/discourse/removeSolutions.js",
     "github:close-pull": "node -r dotenv/config prod/github/closePr.js",
     "github:labels": "node -r dotenv/config prod/github/syncLabels.js",
-    "github:teams": "node -r dotenv/config prod/github/permissions.js"
+    "github:teams": "node -r dotenv/config prod/github/permissions.js",
+    "mongo:query": "node -r dotenv/config prod/mongo/query.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "@octokit/rest": "20.0.2",
     "discord.js": "14.14.1",
     "dotenv": "16.4.5",
+    "mongodb": "6.3.0",
     "winston": "3.11.0"
   },
   "devDependencies": {
